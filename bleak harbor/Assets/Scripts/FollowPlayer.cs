@@ -1,22 +1,25 @@
 ﻿using UnityEngine;
 
-public class FollowPlayer : MonoBehaviour
+namespace BleakHarbor
 {
-    public GameObject player;
-    private Vector3 offset;
-    public float smoothFactor = 0.1f;
-
-    // Start is called before the first frame update
-    void Start()
+    public class FollowPlayer : MonoBehaviour
     {
-        transform.LookAt(player.transform.position);
-        offset = transform.position - player.transform.position;
-    }
+        public GameObject player;
+        private Vector3 offset;
+        public float smoothFactor = 0.1f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        Vector3 newPos = player.transform.position + offset;
-        transform.position = Vector3.Slerp(transform.position, newPos, smoothFactor);
+        // Start is called before the first frame update
+        void Start()
+        {
+            transform.LookAt(player.transform.position);
+            offset = transform.position - player.transform.position;
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            Vector3 newPos = player.transform.position + offset;
+            transform.position = Vector3.Slerp(transform.position, newPos, smoothFactor);
+        }
     }
 }
