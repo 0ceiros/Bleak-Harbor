@@ -63,6 +63,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AI\MovingBox.cs" />
+    <Compile Include="Assets\Scripts\AI\TargetFollower.cs" />
+    <Compile Include="Assets\Scripts\Core\EntityBase.cs" />
     <Compile Include="Assets\Scripts\FaceMouse.cs" />
     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
     <Compile Include="Assets\Scripts\PickupItem.cs" />
