@@ -33,14 +33,14 @@ namespace BleakHarbor.Core
             body.AddForce(force, ForceMode2D.Force);
         }
 
-        void Start()
+        public void Start()
         {
             if (body == null)
             {
                 body = GetComponent<Rigidbody2D>();
             }
         }
-        void Update()
+        public void Update()
         {
             Move(DirectionFactory());
         }
